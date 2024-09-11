@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem com Inputs</title>
+    <style>
+        /* Estilos gerais */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+        }
+
+        /* Estilo da imagem */
+        .container {
+            position: relative;
+            width: 9.5cm;
+            height: 6.5cm;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilo da imagem */
+        .container2 {
+            position: relative;
+            width: 9.5cm;
+            height: 6.5cm;
+        }
+
+        .container2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Estilos dos inputs sobre a imagem */
+        .input-box {
+            position: absolute;
+            border: 1px solid #00000000;
+            background-color: rgba(255, 255, 255, 0);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Posicionando os inputs nos espaços verdes e rosas */
+        .input1 {
+            font-size: 6px;
+            top: 13px; /* Ajuste conforme necessário */
+            left: 11px; /* Ajuste conforme necessário */
+            width: 82px;
+            height: 10px;
+        }
+
+        .input2 {
+            font-size: 6px;
+            top: 14px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+
+        .input3 {
+            font-size: 6px;
+            top: 28px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input4 {
+            font-size: 6px;
+            top: 42px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input5 {
+            font-size: 6px;
+            top: 56px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input6 {
+            font-size: 6px;
+            top: 70px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input7 {
+            font-size: 6px;
+            top: 84px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input8 {
+            font-size: 6px;
+            top: 98px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input9 {
+            font-size: 6px;
+            top: 112px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input10 {
+            font-size: 6px;
+            top: 126px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input11 {
+            font-size: 6px;
+            top: 140px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input12 {
+            font-size: 6px;
+            top: 154px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input13 {
+            font-size: 6px;
+            top: 168px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input14 {
+            font-size: 6px;
+            top: 182px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input15 {
+            font-size: 6px;
+            top: 196px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input16 {
+            font-size: 6px;
+            top: 210px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input17 {
+            font-size: 6px;
+            top: 224px; /* Ajuste conforme necessário */
+            left: 275px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input18 {
+            font-size: 6px;
+            top: 21px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input19 {
+            font-size: 6px;
+            top: 49px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input20 {
+            font-size: 6px;
+            top: 77px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input21 {
+            font-size: 6px;
+            top: 105px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input22 {
+            font-size: 6px;
+            top: 132px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+
+        .input23 {
+            font-size: 6px;
+            top: 161px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+
+        .input24 {
+            font-size: 6px;
+            top: 189px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input25 {
+            font-size: 6px;
+            top: 217px; /* Ajuste conforme necessário */
+            left: 185px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input26 {
+            font-size: 6px;
+            top: 35px; /* Ajuste conforme necessário */
+            left: 94px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input27 {
+            font-size: 6px;
+            top: 91px; /* Ajuste conforme necessário */
+            left: 94px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input28 {
+            font-size: 6px;
+            top: 146px; /* Ajuste conforme necessário */
+            left: 94px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input29 {
+            font-size: 6px;
+            top: 202px; /* Ajuste conforme necessário */
+            left: 95px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input30 {
+            font-size: 6px;
+            top: 63px; /* Ajuste conforme necessário */
+            left: 22px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+        .input31 {
+            font-size: 6px;
+            top: 175px; /* Ajuste conforme necessário */
+            left: 22px; /* Ajuste conforme necessário */
+            width: 71px;
+            height: 10px;
+        }
+
+
+        /* Estilos para impressão */
+        @media print {
+            .container {
+                width: 9.5cm;
+                height: 6.5cm;
+                transform: rotate(180deg);
+                image-rendering: auto;
+            }
+            .container2 {
+                width: 9.5cm;
+                height: 6.5cm;
+                image-rendering: auto;
+            }
+
+            input {
+                border: none;
+                font-size: 12px;
+                text-align: center;
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container2">
+            <img src="img/C1.png" alt="Imagem com inputs">
+        </div>
+        <div class="container">
+            <img src="img/DC2.png" alt="Imagem com inputs">
+            <input type="text" class="input-box input2" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input3" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input1" placeholder="FILHO">
+            <input type="text" class="input-box input4" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input5" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input6" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input7" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input8" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input9" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input10" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input11" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input12" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input13" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input14" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input15" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input16" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input17" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input18" placeholder="BISAVÔ">
+            <input type="text" class="input-box input19" placeholder="BISAVÓ">
+            <input type="text" class="input-box input20" placeholder="BISAVÔ">
+            <input type="text" class="input-box input21" placeholder="BISAVÓ">
+            <input type="text" class="input-box input22" placeholder="BISAVÔ">
+            <input type="text" class="input-box input23" placeholder="BISAVÓ">
+            <input type="text" class="input-box input24" placeholder="BISAVÔ">
+            <input type="text" class="input-box input25" placeholder="BISAVÓ">
+            <input type="text" class="input-box input26" placeholder="AVÔ">
+            <input type="text" class="input-box input27" placeholder="AVÓ">
+            <input type="text" class="input-box input28" placeholder="AVÔ">
+            <input type="text" class="input-box input29" placeholder="AVÓ">
+            <input type="text" class="input-box input30" placeholder="PAI">
+            <input type="text" class="input-box input31" placeholder="MÃE">
+        </div>
+    </section>
+    <section>
+        <div class="container2">
+            <img src="img/C1.png" alt="Imagem com inputs">
+        </div>
+        <div class="container">
+            <img src="img/DC2.png" alt="Imagem com inputs">
+            <input type="text" class="input-box input2" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input3" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input1" placeholder="FILHO">
+            <input type="text" class="input-box input4" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input5" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input6" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input7" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input8" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input9" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input10" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input11" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input12" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input13" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input14" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input15" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input16" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input17" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input18" placeholder="BISAVÔ">
+            <input type="text" class="input-box input19" placeholder="BISAVÓ">
+            <input type="text" class="input-box input20" placeholder="BISAVÔ">
+            <input type="text" class="input-box input21" placeholder="BISAVÓ">
+            <input type="text" class="input-box input22" placeholder="BISAVÔ">
+            <input type="text" class="input-box input23" placeholder="BISAVÓ">
+            <input type="text" class="input-box input24" placeholder="BISAVÔ">
+            <input type="text" class="input-box input25" placeholder="BISAVÓ">
+            <input type="text" class="input-box input26" placeholder="AVÔ">
+            <input type="text" class="input-box input27" placeholder="AVÓ">
+            <input type="text" class="input-box input28" placeholder="AVÔ">
+            <input type="text" class="input-box input29" placeholder="AVÓ">
+            <input type="text" class="input-box input30" placeholder="PAI">
+            <input type="text" class="input-box input31" placeholder="MÃE">
+        </div>
+    </section>
+    <section>
+        <div class="container2">
+            <img src="img/C1.png" alt="Imagem com inputs">
+        </div>
+        <div class="container">
+            <img src="img/DC2.png" alt="Imagem com inputs">
+            <input type="text" class="input-box input2" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input3" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input1" placeholder="FILHO">
+            <input type="text" class="input-box input4" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input5" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input6" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input7" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input8" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input9" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input10" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input11" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input12" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input13" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input14" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input15" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input16" placeholder="TRISAVÔ">
+            <input type="text" class="input-box input17" placeholder="TRISAVÓ">
+            <input type="text" class="input-box input18" placeholder="BISAVÔ">
+            <input type="text" class="input-box input19" placeholder="BISAVÓ">
+            <input type="text" class="input-box input20" placeholder="BISAVÔ">
+            <input type="text" class="input-box input21" placeholder="BISAVÓ">
+            <input type="text" class="input-box input22" placeholder="BISAVÔ">
+            <input type="text" class="input-box input23" placeholder="BISAVÓ">
+            <input type="text" class="input-box input24" placeholder="BISAVÔ">
+            <input type="text" class="input-box input25" placeholder="BISAVÓ">
+            <input type="text" class="input-box input26" placeholder="AVÔ">
+            <input type="text" class="input-box input27" placeholder="AVÓ">
+            <input type="text" class="input-box input28" placeholder="AVÔ">
+            <input type="text" class="input-box input29" placeholder="AVÓ">
+            <input type="text" class="input-box input30" placeholder="PAI">
+            <input type="text" class="input-box input31" placeholder="MÃE">
+        </div>
+    </section>
+    <script>
+        // window.onload = function() {
+        //     window.print(); // Abre a janela de impressão
+        // };
+    </script>
+</body>
+</html>
